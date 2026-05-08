@@ -837,7 +837,7 @@ section { padding: 100px 64px; }
 #certs { background: var(--bg); }
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
@@ -885,6 +885,28 @@ section { padding: 100px 64px; }
   font-size: 10px;
   padding: 2px 8px;
   letter-spacing: 1px;
+}
+.cert-learns {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+.cert-learns li {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 2px 0;
+  padding-left: 12px;
+  position: relative;
+  line-height: 1.5;
+}
+.cert-learns li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-size: 13px;
+  line-height: 1.3;
 }
 .cert-status.active {
   background: rgba(0,200,255,.1);
@@ -1607,6 +1629,13 @@ footer {
         <div class="cert-name">CompTIA A+</div>
         <div class="cert-code">COMP001022355829 &middot; Exp. Nov 2026</div>
         <span class="cert-status active">ACTIVE</span>
+        <ul class="cert-learns">
+          <li>Hardware diagnostics, component replacement, and peripheral setup</li>
+          <li>OS installation and troubleshooting across Windows 10/11, macOS, and mobile</li>
+          <li>Networking fundamentals: TCP/IP, DNS, DHCP, wireless protocols</li>
+          <li>Security basics: malware removal, encryption, physical and logical controls</li>
+          <li>Virtualization, cloud computing concepts, and operational procedures</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
@@ -1615,14 +1644,28 @@ footer {
         <div class="cert-name">TryHackMe Pre-Security</div>
         <div class="cert-code">SEC0 &middot; Issued Jun 2026</div>
         <span class="cert-status active">EARNED</span>
+        <ul class="cert-learns">
+          <li>How computers process, store, and manage information at a foundational level</li>
+          <li>How operating systems manage files, users, and processes</li>
+          <li>How devices communicate and how data moves across networks</li>
+          <li>How the web, browsers, and online services function</li>
+          <li>Practical scenario-based exam — no multiple choice, applied knowledge only</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
       <div class="cert-icon">✓</div>
       <div class="cert-info">
         <div class="cert-name">TryHackMe Cybersecurity 101</div>
-        <div class="cert-code">SEC1 &middot; Issued Mar 2026</div>
+        <div class="cert-code">SEC1 &middot; THM-69caf159d2fc40d404145854 &middot; Issued Mar 2026</div>
         <span class="cert-status active">EARNED</span>
+        <ul class="cert-learns">
+          <li>Windows and Linux architecture, file systems, user management, command-line proficiency</li>
+          <li>Network protocol analysis, packet capture, and identifying anomalous traffic (PCAP)</li>
+          <li>Web vulnerabilities and basic penetration testing methodology</li>
+          <li>Defensive security: log analysis, threat detection, incident identification, SOC tooling</li>
+          <li>100% hands-on practical exam across Red Team, Blue Team, and Purple Team scenarios</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
@@ -1631,6 +1674,13 @@ footer {
         <div class="cert-name">ISC&sup2; Certified in Cybersecurity</div>
         <div class="cert-code">CC &middot; Issued Jan 2026</div>
         <span class="cert-status active">ACTIVE</span>
+        <ul class="cert-learns">
+          <li>Security principles: CIA Triad, access control models, and authentication</li>
+          <li>Network security concepts and defense-in-depth strategies</li>
+          <li>Incident response fundamentals and security operations</li>
+          <li>Business continuity, disaster recovery, and risk management planning</li>
+          <li>Governance, compliance, and data security best practices</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
@@ -1639,6 +1689,13 @@ footer {
         <div class="cert-name">CompTIA Network+</div>
         <div class="cert-code">N10-009</div>
         <span class="cert-status progress">IN PROGRESS</span>
+        <ul class="cert-learns">
+          <li>Networking concepts: OSI model, ports, protocols, cloud and SD-WAN</li>
+          <li>Network implementation: routing (OSPF/BGP), switching, VLANs, wireless</li>
+          <li>Network operations: monitoring, documentation, change management</li>
+          <li>Network security: Zero Trust, firewalls, IDS/IPS, common attack types</li>
+          <li>Network troubleshooting methodology applied from Layer 1 up</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
@@ -1647,6 +1704,13 @@ footer {
         <div class="cert-name">CompTIA Security+</div>
         <div class="cert-code">SY0-701</div>
         <span class="cert-status planned">PLANNED</span>
+        <ul class="cert-learns">
+          <li>General security concepts: cryptography, PKI, control types</li>
+          <li>Threats, vulnerabilities, and mitigations including malware and social engineering</li>
+          <li>Security architecture: Zero Trust, SASE, cloud and hybrid environments</li>
+          <li>Security operations: SIEM, SOAR, incident response (PICERL), digital forensics</li>
+          <li>Security program management: governance, risk, compliance (HIPAA, PCI, GDPR)</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
