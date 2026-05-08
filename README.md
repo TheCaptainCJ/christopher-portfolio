@@ -26,8 +26,6 @@
 
 This is my personal portfolio website. Single-file HTML, no build step, no dependencies. Everything renders from one file with a "hacker blue" terminal aesthetic and an interactive SOC analyst HUD in the hero.
 
-**Live site:** [TheCaptainCJ.github.io](https://TheCaptainCJ.github.io)
-
 ## What's Inside
 
 The portfolio covers nine production-grade projects spanning IT support, networking, virtualization, malware analysis, and SOC operations:
