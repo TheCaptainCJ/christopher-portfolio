@@ -1,8 +1,8 @@
-# Christopher O'Keefe - Portfolio
+# Christopher O'Keefe — Portfolio
 
 <p align="center">
   <strong>IT Support Specialist · Cybersecurity Graduate · Aspiring SOC Analyst</strong><br>
-  Vancouver, WA · Pacific Northwest
+  Portland Metro Area · Pacific Northwest
 </p>
 
 <p align="center">
@@ -113,6 +113,7 @@ The portfolio supports keyboard navigation. Press `?` from anywhere to see the f
 - **LinkedIn:** [linkedin.com/in/christopherokeefe93](https://linkedin.com/in/christopherokeefe93)
 - **GitHub:** [github.com/TheCaptainCJ](https://github.com/TheCaptainCJ)
 - **TryHackMe:** [tryhackme.com/p/Chritikal](https://tryhackme.com/p/Chritikal)
+- **Location:** Portland Metro Area
 
 ---
 
