@@ -1,4 +1,4 @@
-# Christopher O'Keefe — Portfolio
+# Christopher O'Keefe - Portfolio
 
 <p align="center">
   <strong>IT Support Specialist · Cybersecurity Graduate · Aspiring SOC Analyst</strong><br>
