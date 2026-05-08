@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ── RESET & BASE ─────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --bg:        #04080f;
@@ -37,7 +37,7 @@ body {
 }
 
 /* Scanlines overlay */
-body::before {
+body:before {
   content: '';
   position: fixed;
   inset: 0;
@@ -53,9 +53,9 @@ a { color: var(--blue); text-decoration: none; transition: opacity .2s; }
 a:hover { opacity: .75; }
 
 /* ── SCROLLBAR ────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--dimmer); border-radius: 3px; }
+:-webkit-scrollbar { width: 6px; }
+:-webkit-scrollbar-track { background: var(--bg); }
+:-webkit-scrollbar-thumb { background: var(--dimmer); border-radius: 3px; }
 
 /* ── NAV ──────────────────────────────────────────── */
 nav {
@@ -106,7 +106,7 @@ nav {
 }
 
 /* Grid background */
-#hero::before {
+#hero:before {
   content: '';
   position: absolute;
   inset: 0;
@@ -118,7 +118,7 @@ nav {
 }
 
 /* Glow blob */
-#hero::after {
+#hero:after {
   content: '';
   position: absolute;
   top: 20%;
@@ -151,7 +151,7 @@ nav {
   font-family: var(--mono);
   box-shadow: 0 24px 60px rgba(0,200,255,.04), inset 0 0 60px rgba(0,200,255,.02);
 }
-.hero-hud::before {
+.hero-hud:before {
   content: '';
   position: absolute;
   top: -1px; left: 0;
@@ -232,7 +232,7 @@ nav {
   box-shadow: 0 0 8px var(--blue);
   position: relative;
 }
-.hud-progress-bar::after {
+.hud-progress-bar:after {
   content: '';
   position: absolute;
   top: 0; right: 0; bottom: 0;
@@ -311,7 +311,7 @@ nav {
   box-shadow: 0 0 12px var(--blue);
   transform: scale(1.2);
 }
-.rail-dot::after {
+.rail-dot:after {
   content: attr(data-label);
   position: absolute;
   right: 24px;
@@ -329,7 +329,7 @@ nav {
   pointer-events: none;
   transition: opacity .2s;
 }
-.rail-dot:hover::after { opacity: 1; }
+.rail-dot:hover:after { opacity: 1; }
 
 /* ── FLOATING ACTION DOCK ─────────────────────────── */
 .dock {
@@ -361,7 +361,7 @@ nav {
   border-color: var(--blue);
   transform: translateY(-2px);
 }
-.dock-btn::after {
+.dock-btn:after {
   content: attr(data-tip);
   position: absolute;
   right: 52px;
@@ -378,7 +378,7 @@ nav {
   pointer-events: none;
   transition: opacity .2s;
 }
-.dock-btn:hover::after { opacity: 1; }
+.dock-btn:hover:after { opacity: 1; }
 #dock-top { display: none; }
 #dock-top.visible { display: flex; }
 
@@ -462,7 +462,7 @@ nav {
   align-items: center;
   gap: 8px;
 }
-.hero-prompt::before {
+.hero-prompt:before {
   content: '>';
   color: var(--blue);
   font-size: 16px;
@@ -591,8 +591,8 @@ section { padding: 100px 64px; }
   margin-left: auto;
   margin-right: auto;
 }
-.section-tag::before,
-.section-tag::after {
+.section-tag:before,
+.section-tag:after {
   content: '';
   flex: 0 0 60px;
   height: 1px;
@@ -684,7 +684,7 @@ section { padding: 100px 64px; }
   transition: all .3s;
   cursor: default;
 }
-.project-card::before {
+.project-card:before {
   content: '';
   position: absolute;
   top: 0; left: 0;
@@ -694,7 +694,7 @@ section { padding: 100px 64px; }
   transform-origin: left;
   transition: transform .4s;
 }
-.project-card:hover::before { transform: scaleX(1); }
+.project-card:hover:before { transform: scaleX(1); }
 .project-card:hover {
   border-color: rgba(0,200,255,.25);
   transform: translateY(-4px);
@@ -758,7 +758,7 @@ section { padding: 100px 64px; }
   gap: 6px;
 }
 .project-link:hover { color: var(--blue); }
-.project-link::before { content: '→ '; }
+.project-link:before { content: '→ '; }
 
 /* Featured project spans full width */
 .project-card.featured {
@@ -900,7 +900,7 @@ section { padding: 100px 64px; }
   position: relative;
   line-height: 1.5;
 }
-.cert-learns li::before {
+.cert-learns li:before {
   content: '›';
   position: absolute;
   left: 0;
@@ -934,7 +934,7 @@ section { padding: 100px 64px; }
   margin-bottom: 36px;
   position: relative;
 }
-.edu-item:not(:last-child)::after {
+.edu-item:not(:last-child):after {
   content: '';
   position: absolute;
   left: 37px;
@@ -1630,11 +1630,17 @@ footer {
         <div class="cert-code">COMP001022355829 &middot; Exp. Nov 2026</div>
         <span class="cert-status active">ACTIVE</span>
         <ul class="cert-learns">
-          <li>Hardware diagnostics, component replacement, and peripheral setup</li>
-          <li>OS installation and troubleshooting across Windows 10/11, macOS, and mobile</li>
-          <li>Networking fundamentals: TCP/IP, DNS, DHCP, wireless protocols</li>
-          <li>Security basics: malware removal, encryption, physical and logical controls</li>
-          <li>Virtualization, cloud computing concepts, and operational procedures</li>
+          <li>Core 1 (220-1101): Mobile Devices 15%: laptop hardware, MDM, iOS/Android setup, cellular connectivity, hotspot configuration</li>
+          <li>Core 1: Networking 20%: TCP/UDP ports and protocols, routing, switching, SOHO setup, IPv4/IPv6, VPN, VLAN, Wi-Fi standards (802.11a/b/g/n/ac/ax)</li>
+          <li>Core 1: Hardware 25%: motherboards, CPUs, RAM (DDR3/4/5), storage (HDD/SSD/NVMe/RAID), power supplies, printers, cabling (Cat5e/6/6a, fiber)</li>
+          <li>Core 1: Virtualization &amp; Cloud 11%: IaaS/PaaS/SaaS, Type 1 and Type 2 hypervisors, public/private/hybrid cloud, resource requirements</li>
+          <li>Core 1: Hardware &amp; Network Troubleshooting 29%: POST diagnostics, BSOD, storage failure symptoms, display issues, printer faults, wireless signal problems</li>
+          <li>Core 2 (220-1102): Operating Systems 31%: Windows 10/11 editions, command-line tools (ipconfig, netstat, ping, sfc, diskpart), macOS and Linux fundamentals</li>
+          <li>Core 2: Security 25%: malware types (ransomware, rootkit, trojan, spyware), removal methodology, WPA2/WPA3, BitLocker, EFS, UAC, social engineering</li>
+          <li>Core 2: Software Troubleshooting 22%: OS boot issues, profile errors, malware removal (seven-step process), mobile app security, application crashes</li>
+          <li>Core 2: Operational Procedures 22%: backup types (full/incremental/differential, 3-2-1 rule), change management, scripting basics (.ps1, .sh, .py), remote access tools</li>
+          <li>Performance-based questions (PBQs) require live troubleshooting of simulated hardware, network, and OS scenarios: not just theory recall</li>
+          <li>Job roles: Help Desk Technician, IT Support Specialist, Desktop Support Analyst, Field Service Technician, End User Computing Technician</li>
         </ul>
       </div>
     </div>
@@ -1645,11 +1651,15 @@ footer {
         <div class="cert-code">SEC0 &middot; Issued Jun 2026</div>
         <span class="cert-status active">EARNED</span>
         <ul class="cert-learns">
-          <li>How computers process, store, and manage information at a foundational level</li>
-          <li>How operating systems manage files, users, and processes</li>
-          <li>How devices communicate and how data moves across networks</li>
-          <li>How the web, browsers, and online services function</li>
-          <li>Practical scenario-based exam — no multiple choice, applied knowledge only</li>
+          <li>100% hands-on practical exam: fill-in-the-blank scenario questions, no multiple choice, no guessing</li>
+          <li>6 sections, 10 questions each, 600 points total: pass mark 390/600 (65%). 24-hour window with per-section timers</li>
+          <li>Section 1: Computer Fundamentals: how CPUs, memory, storage, buses, and binary/hex/ASCII data representation work</li>
+          <li>Section 2: Operating System Fundamentals: how Windows and Linux manage files, users, processes, and permissions. Basic command-line navigation and administration</li>
+          <li>Section 3: Data Representation &amp; Programming Concepts: variables, control flow, encoding/decoding (Base64, URL, hex), introduction to Python and SQL</li>
+          <li>Section 4: Networking Fundamentals: OSI model layer by layer, IP addressing, subnetting, TCP/UDP, common protocols and ports, switches and routers</li>
+          <li>Section 5: Internet Fundamentals: how the web works: DNS resolution, HTTP/HTTPS request/response cycle, cookies, TLS, client-server model</li>
+          <li>Section 6: Cyber Security Fundamentals: CIA triad, common threats and vulnerabilities, defense-in-depth, intro to red/blue team thinking, role of a SOC, incident response phases</li>
+          <li>Certificate is publicly verifiable via Credly badge. Valid 3 years. First step in TryHackMe's certification ladder (SEC0 → SEC1 → SAL1/PT1)</li>
         </ul>
       </div>
     </div>
@@ -1660,11 +1670,17 @@ footer {
         <div class="cert-code">SEC1 &middot; THM-69caf159d2fc40d404145854 &middot; Issued Mar 2026</div>
         <span class="cert-status active">EARNED</span>
         <ul class="cert-learns">
-          <li>Windows and Linux architecture, file systems, user management, command-line proficiency</li>
-          <li>Network protocol analysis, packet capture, and identifying anomalous traffic (PCAP)</li>
-          <li>Web vulnerabilities and basic penetration testing methodology</li>
-          <li>Defensive security: log analysis, threat detection, incident identification, SOC tooling</li>
-          <li>100% hands-on practical exam across Red Team, Blue Team, and Purple Team scenarios</li>
+          <li>100% hands-on practical exam across a live analyst VM with real PCAP files, log files, malware samples, and vulnerable targets. No multiple choice. 24-hour window</li>
+          <li>7 sections covering Red Team, Blue Team, and Purple Team: the only beginner cert testing all three simultaneously</li>
+          <li>Section 1: OS Fundamentals (Windows &amp; Linux): file systems, user management, security features, PowerShell and Bash command-line proficiency, registry navigation, Linux config files</li>
+          <li>Section 2: Networking &amp; Traffic Analysis: interpreting TCP/IP protocols, PCAP analysis in Wireshark, identifying port scans, brute force, and data exfiltration in captured traffic</li>
+          <li>Section 3: Web Pentesting (Red): OWASP vulnerabilities including SQL injection, XSS, IDOR, command injection, file upload bypass. Basic Burp Suite usage and directory brute-forcing</li>
+          <li>Section 4: Credential Attacks (Red): applying Hydra, John the Ripper, and Hashcat against authentication endpoints and hash files</li>
+          <li>Section 5: PowerShell &amp; Bash Scripting (Purple): using PowerShell and Bash to enumerate systems, parse log files, and automate investigation tasks under exam conditions</li>
+          <li>Section 6: SOC &amp; Log Analysis (Blue): Windows Event Log analysis, Sysmon, Linux syslog, threat detection, alert triage, SIEM-style queries, incident identification</li>
+          <li>Section 7: Incident Investigation &amp; Malware Triage (Blue): examining suspicious files, applying incident response methodology, conducting investigation inside a SOC-style UI</li>
+          <li>Validates you can put hands on keyboard and deliver results: not just recall definitions. Positioned as a hands-on companion to CompTIA Security+</li>
+          <li>Job roles: Junior SOC Analyst, Security Analyst Trainee, Cybersecurity Intern, IT Support with security duties</li>
         </ul>
       </div>
     </div>
@@ -1675,11 +1691,14 @@ footer {
         <div class="cert-code">CC &middot; Issued Jan 2026</div>
         <span class="cert-status active">ACTIVE</span>
         <ul class="cert-learns">
-          <li>Security principles: CIA Triad, access control models, and authentication</li>
-          <li>Network security concepts and defense-in-depth strategies</li>
-          <li>Incident response fundamentals and security operations</li>
-          <li>Business continuity, disaster recovery, and risk management planning</li>
-          <li>Governance, compliance, and data security best practices</li>
+          <li>100-question exam, 2 hours, passing score 700/1000. Entry-level credential from ISC2: no prior work experience required</li>
+          <li>Domain 1: Security Principles 26%: CIA triad, authenticity and non-repudiation, risk management (asset/threat/vulnerability/likelihood/impact), security control types (administrative/technical/physical), governance frameworks (NIST, ISO 27001), GDPR and HIPAA awareness</li>
+          <li>Domain 2: BC, DR &amp; Incident Response 10%: Business Continuity Plan components, Disaster Recovery Plan elements, incident response lifecycle (preparation, detection, containment, eradication, recovery, lessons learned), RPO, RTO, MTD, hot/warm/cold recovery sites</li>
+          <li>Domain 3: Access Controls 22%: physical access controls (badge systems, mantraps, CCTV), logical controls (MFA, SSO, password management), authorization models (DAC, MAC, RBAC, attribute-based), least privilege, segregation of duties, identity lifecycle management</li>
+          <li>Domain 4: Network Security 24%: OSI vs TCP/IP models, common threats (DoS/DDoS, MITM, spoofing, sniffing), network defenses (firewalls, IDS/IPS, VLANs, DMZ, VPNs, NAC), cloud security models (IaaS/PaaS/SaaS), zero trust principles, SASE/SSE concepts</li>
+          <li>Domain 5: Security Operations 18%: data classification and handling, cryptography fundamentals (symmetric/asymmetric, hashing, PKI, digital signatures), logging and SIEM concepts, configuration management and hardening, security awareness training, social engineering recognition</li>
+          <li>Validates foundational vocabulary, threat recognition, control frameworks, and governance knowledge needed to contribute in a junior security role</li>
+          <li>Valid 3 years, 45 CPEs per cycle. September 2026 refresh adds AI security topics across all domains</li>
         </ul>
       </div>
     </div>
@@ -1687,14 +1706,16 @@ footer {
       <div class="cert-icon">◎</div>
       <div class="cert-info">
         <div class="cert-name">CompTIA Network+</div>
-        <div class="cert-code">N10-009</div>
+        <div class="cert-code">N10-009 &middot; In Progress</div>
         <span class="cert-status progress">IN PROGRESS</span>
         <ul class="cert-learns">
-          <li>Networking concepts: OSI model, ports, protocols, cloud and SD-WAN</li>
-          <li>Network implementation: routing (OSPF/BGP), switching, VLANs, wireless</li>
-          <li>Network operations: monitoring, documentation, change management</li>
-          <li>Network security: Zero Trust, firewalls, IDS/IPS, common attack types</li>
-          <li>Network troubleshooting methodology applied from Layer 1 up</li>
+          <li>Up to 90 questions, 90 minutes, pass 720/900. Mix of multiple-choice and PBQs. Recommended after A+ with 9-12 months networking experience. DoD 8140 approved</li>
+          <li>Domain 1: Networking Concepts 23%: OSI 7-layer model, cloud networking (VPC, IaaS/PaaS/SaaS, SDWAN), common ports and protocols, transmission media (copper/fiber/SFP/QSFP), IPv4 subnetting and CIDR, IPv6, VXLAN, zero trust and SASE</li>
+          <li>Domain 2: Network Implementation 20%: routing (static, BGP, OSPF, EIGRP), switching (VLANs, trunking 802.1Q, STP/RSTP, LACP, port mirroring), wireless deployment (802.11ax/be, WPA3 enterprise/personal, antenna types, AP controllers, mesh networks), physical rack and power infrastructure</li>
+          <li>Domain 3: Network Operations 19%: change management, incident response, documentation (physical/logical diagrams, IPAM, rack diagrams), network monitoring (SNMP, NetFlow/sFlow, syslog, SIEM), DHCP/DNS/NTP configuration, RPO/RTO/MTBF, hot/warm/cold sites, VPN (site-to-site and client-to-site)</li>
+          <li>Domain 4: Network Security 14%: CIA/AAA, zero trust, defense in depth, ACLs, firewall rules, 802.1X, NAC, network attack types (DoS, MITM, ARP spoofing, VLAN hopping, evil twin, deauth, DNS poisoning, rogue DHCP), IDS/IPS placement, secure protocols</li>
+          <li>Domain 5: Network Troubleshooting 24%: formal troubleshooting methodology, cabling and physical faults, STP loops, VLAN misconfigs, ACL blocks, routing errors, DHCP/DNS failures, Wi-Fi interference, using tcpdump, Wireshark, nmap, traceroute, nslookup, dig, netstat, arp, cable testers, OTDR</li>
+          <li>Builds directly on A+ networking knowledge toward Security+, CCNA, and junior network admin roles</li>
         </ul>
       </div>
     </div>
@@ -1705,11 +1726,13 @@ footer {
         <div class="cert-code">SY0-701</div>
         <span class="cert-status planned">PLANNED</span>
         <ul class="cert-learns">
-          <li>General security concepts: cryptography, PKI, control types</li>
-          <li>Threats, vulnerabilities, and mitigations including malware and social engineering</li>
-          <li>Security architecture: Zero Trust, SASE, cloud and hybrid environments</li>
-          <li>Security operations: SIEM, SOAR, incident response (PICERL), digital forensics</li>
-          <li>Security program management: governance, risk, compliance (HIPAA, PCI, GDPR)</li>
+          <li>Up to 90 questions, 90 minutes, pass 750/900. Includes PBQs. DoD 8570 IAT Level II approved</li>
+          <li>Domain 1: General Security Concepts 12%: cryptography, PKI, MFA, SSO, biometrics, security control categories, change management</li>
+          <li>Domain 2: Threats, Vulnerabilities &amp; Mitigations 22%: threat actors, malware types (ransomware, fileless, rootkit, cryptominer), social engineering, MITRE ATT&amp;CK framework</li>
+          <li>Domain 3: Security Architecture 18%: cloud and hybrid design, Zero Trust, SASE, infrastructure as code, data protection at rest/in transit/in use, IAM and PAM</li>
+          <li>Domain 4: Security Operations 28%: SIEM and SOAR, EDR/XDR, incident response lifecycle (PICERL), digital forensics, chain of custody, vulnerability scanning</li>
+          <li>Domain 5: Security Program Management 20%: NIST RMF, ISO 27001, PCI DSS, HIPAA, GDPR, CMMC, security awareness training, third-party risk</li>
+          <li>Next step after Network+: unlocks CySA+ and the SOC analyst blue team career path</li>
         </ul>
       </div>
     </div>
@@ -1719,6 +1742,11 @@ footer {
         <div class="cert-name">Microsoft Azure Fundamentals</div>
         <div class="cert-code">AZ-900</div>
         <span class="cert-status planned">PLANNED</span>
+        <ul class="cert-learns">
+          <li>Cloud concepts: benefits, IaaS/PaaS/SaaS, public/private/hybrid, CapEx vs OpEx</li>
+          <li>Azure architecture: regions, availability zones, resource groups, VMs, App Service, Functions, AKS, VNet, storage, Entra ID, Cosmos DB, SQL</li>
+          <li>Azure management and governance: Azure Portal, CLI, ARM Templates, Cost Management, Azure Policy, RBAC, Compliance Manager</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
@@ -1727,6 +1755,12 @@ footer {
         <div class="cert-name">AWS Cloud Practitioner</div>
         <div class="cert-code">CLF-C02</div>
         <span class="cert-status planned">PLANNED</span>
+        <ul class="cert-learns">
+          <li>Cloud concepts 24%: AWS Well-Architected Framework, Cloud Adoption Framework, migration strategies, cloud economics</li>
+          <li>Security &amp; compliance 30%: shared responsibility model, IAM, GuardDuty, Shield, WAF, Macie, Inspector, AWS compliance programs</li>
+          <li>Cloud technology &amp; services 34%: EC2, Lambda, ECS/EKS, S3, EBS, EFS, VPC, Route 53, CloudFront, RDS, DynamoDB, CloudWatch</li>
+          <li>Billing, pricing &amp; support 12%: On-Demand/Reserved/Savings Plans/Spot pricing, Cost Explorer, Budgets, all five Support plan tiers</li>
+        </ul>
       </div>
     </div>
     <div class="cert-card fade-in">
@@ -1735,6 +1769,14 @@ footer {
         <div class="cert-name">CompTIA CySA+</div>
         <div class="cert-code">CS0-003</div>
         <span class="cert-status planned">GOAL</span>
+        <ul class="cert-learns">
+          <li>85 questions, 165 minutes, pass 750/900. Advanced-level analyst cert: the SOC analyst credential</li>
+          <li>Domain 1: Security Operations 33%: SIEM/SOAR, EDR/XDR, system and network architecture analysis, log correlation, threat hunting, packet capture analysis</li>
+          <li>Domain 2: Vulnerability Management 30%: asset discovery, vulnerability scanning (Nessus/Qualys), CVSS/CVE scoring, prioritization, remediation and patch management</li>
+          <li>Domain 3: Incident Response &amp; Management 20%: IR lifecycle (PICERL), IOC analysis, root cause investigation, evidence handling, MITRE ATT&amp;CK mapping</li>
+          <li>Domain 4: Reporting &amp; Communication 17%: vulnerability and incident reports, KPIs (MTTD/MTTR), stakeholder communication, compliance documentation</li>
+          <li>Long-term goal: the cert that validates a full SOC Analyst (Blue Team) role</li>
+        </ul>
       </div>
     </div>
   </div>
